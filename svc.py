@@ -20,8 +20,6 @@ clf = SVC(kernel="linear")
 
 #### store your predictions in a list named pred
 
-
-
 clf.fit(features_train, labels_train)
 pred = clf.predict(features_test)
 
