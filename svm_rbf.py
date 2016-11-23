@@ -11,13 +11,10 @@ from udacity import *
 import sys
 from time import time
 sys.path.append("/udacity/tools/")
-
 from udacity.tools.email_preprocess import preprocess
 from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
 
-### features_train and features_test are the features for the training
-### and testing datasets, respectively
-### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
 
 #features_train = features_train[:len(features_train)/100]
@@ -41,6 +38,5 @@ expected_chris = [ x for x in pred if x == 1 ]
 
 print len(expected_chris)
 
-from sklearn.metrics import accuracy_score
 acc = accuracy_score(pred, labels_test)
 print acc

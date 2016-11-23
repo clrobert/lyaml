@@ -25,8 +25,6 @@ pred = clf.predict(features_test)
 
 acc = accuracy_score(labels_test, pred)
 
-#### grader code, do not modify below this line
-
 #prettyPicture(clf, features_test, labels_test)
 #output_image("test.png", "png", open("test.png", "rb").read())
 
